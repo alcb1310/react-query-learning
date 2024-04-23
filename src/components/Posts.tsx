@@ -26,6 +26,9 @@ export default function Posts() {
 
     return (
         <div className="px-8 py-8 grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mx-auto">
+            {posts.map((post) => (
+                <Post id={post.id} />
+            ))}
         </div>
     )
 }

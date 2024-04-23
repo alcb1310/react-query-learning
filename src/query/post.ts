@@ -11,3 +11,13 @@ export async function fetchPosts(): Promise<PostType[]> {
         throw error
     }
 }
+
+export async function fetchOnePost(id: number): Promise<PostType> {
+    try {
+        const response = await fetch(`${url}/${id}`);
+        const data = await response.json();
+        return data
+    } catch (error) {
+        throw error
+    }
+}
